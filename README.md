@@ -1,25 +1,20 @@
 ```SQL
 
 
-// products less than 8000
-SELECT * FROM product WHERE price <= 8000;
+// Products with price less than 8000NGN
+SELECT * FROM product WHERE price < 8000;
 
-// number of distinct states you have users
-SELECT COUNT(DISTINCT state) FROM Customers;
+//Distinct states you have customer
+SELECT DISTINCT state FROM customer;
 
-// Number of products for a specific user
-SELECT count(order_id) FROM order WHERE customer_id = '1';
+// Number of products for a specific coustomer
+SELECT count(order_id) FROM order WHERE customer_id = 1;
 
 // update the price of a specific product
-UPDATE product SET price  = '3' WHERE product_id = '6';
+UPDATE product SET price  = 3 WHERE product_id = 6;
 
-// select the customer with the highest order
-SELECT customer_id from order WHERE amount IN(SELECT max(amount) from order);
-
-
-
-
-s
+// all the customers in lagos state
+SELECT * FROM customers WHERE customer_id IN (SELECT customer_id FROM customer WHERE state = 'Lagos';
 
 
 

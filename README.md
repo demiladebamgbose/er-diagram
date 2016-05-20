@@ -14,7 +14,7 @@ SELECT count(order_id) FROM order WHERE customer_id = 1;
 UPDATE product SET price  = 3 WHERE product_id = 6;
 
 // all the customers in lagos state
-SELECT * FROM customers WHERE customer_id IN (SELECT customer_id FROM customer WHERE state = 'Lagos';
+SELECT * FROM customers WHERE customer_id IN (SELECT customer_id FROM customer WHERE state = 'Lagos');
 
 
 
